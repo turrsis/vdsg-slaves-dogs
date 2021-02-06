@@ -29,6 +29,24 @@ export default {
             footer: () => footer,
         }
     }, {
+        path: '/litter/:litterId',
+        name: 'litter',
+        components: {
+            header: () => header,
+            default: () => utils.interopDefault(import('./components/dogs/Litter.vue')),
+            footer: () => footer,
+        },
+        props: { default: true }
+    }, {
+        path: '/dog/:id',
+        name: 'dog',
+        components: {
+            header: () => header,
+            default: () => utils.interopDefault(import('./pages/Dog.vue')),
+            footer: () => footer,
+        },
+        props: { default: true }
+    }, {
         path: '/dogs/:filter',
         name: 'dogs',
         components: {
@@ -45,6 +63,15 @@ export default {
             default: () => utils.interopDefault(import('./pages/Shows.vue')),
             footer: () => footer,
         }
+    }, {
+        path: '/show/:id',
+        name: 'show',
+        components: {
+            header: () => header,
+            default: () => utils.interopDefault(import('./pages/Show.vue')),
+            footer: () => footer,
+        },
+        props: { default: true }
     }, {
         path: '/contact',
         name: 'contact',

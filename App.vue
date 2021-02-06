@@ -1,24 +1,22 @@
 <template>
-    <div id="app">
+    <v-app id="app" class="mx-1">
         <AppLayout loading="loading" />
-    </div>
+        <Contact />
+        <DogShortDialog />
+    </v-app>
 </template>
 
 <script>
+import Contact from './pages/Contact.vue'
+import DogShortDialog from './components/dogs/DogShortDialog.vue'
 import AppLayout from './AppLayout.vue'
 
 export default {
-    title: 'Dogs',
+    title: 'HelloWorld',
     name: 'App',
-    components: { AppLayout },
+    components: { AppLayout, DogShortDialog, Contact },
 }
 </script>
 
 <style>
-#app {
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 10px;
-    margin-left: 10px;
-}
 </style>
